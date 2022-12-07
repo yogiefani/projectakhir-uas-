@@ -179,7 +179,44 @@ awal:
         cout << " Tekan ENTER ";
         getch();
         system("cls");
-        goto awal;
+        cout << "___________________________________" << endl;
+        cout << " ================================" << endl;
+        cout << " Main Lagi [y/t] ? ";
+        cin >> lagi;
+        if (lagi == "y")
+        {
+            system("cls");
+            goto awal;
+        }
+        else if (lagi == "t")
+        {
+            system("cls");
+            cout << "\n Terimakasih, Sudah Bermain :) " << endl;
+            cout << "      Bermain Lagi Yah        " << endl;
+            getch();
+            return 0;
+            getch();
+        }
+        else
+        {
+            cout << "\n\n\n\n"
+                 << endl;
+            cout << "============================================================================" << endl;
+            cout << "                      **** Inputan Salah ! ****" << endl;
+            cout << "                              Ulangi ?" << endl;
+            cout << "============================================================================" << endl;
+            cout << "                                 y ? ";
+            cin >> ulangi;
+            if (ulangi == "y")
+            {
+                system("cls");
+                goto awal;
+            }
+            else
+            {
+                goto keluar;
+            }
+        }
     }
     else if (siap == "t")
     {
