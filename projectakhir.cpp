@@ -169,23 +169,9 @@ awal:
         }
         else
         {
-            cout << "\n\n\n\n"
-                 << endl;
-            cout << "============================================================================" << endl;
-            cout << "                      **** Inputan Salah ! ****" << endl;
-            cout << "                              Ulangi ?" << endl;
-            cout << "============================================================================" << endl;
-            cout << "                                 y ? ";
-            cin >> ulangi;
-            if (ulangi == "y")
-            {
-                system("cls");
-                goto awal;
-            }
-            else
-            {
-                goto keluar;
-            }
+            cout << "Input salah!! ";
+            system("cls");
+            goto awal;
         }
         cout << "___________________________________" << endl;
         cout << "Hasil : " << endl;
