@@ -30,133 +30,162 @@ awal:
         system("cls");
         cout << nama_player << " berapa ronde anda ingin bermain ? : ";
         cin >> rounds;
-        for (int ronde = 1; ronde <= rounds; ronde++)
+        if (rounds > 0)
         {
-        kedua:
-            system("cls");
-            srand(time(NULL));
-            int com = rand() % 10;
-            cout << "___________________________________" << endl
-                 << endl;
-            cout << " ================================" << endl;
-            cout << "  \tSelamat Datang " << nama_player << endl;
-            cout << "  Di Game Batu, Kertas, Gunting " << endl;
-            cout << " ================================" << endl;
-            cout << "Ronde ke : " << ronde << "/" << rounds << endl;
-            cout << nama_player << " Score = " << player_score << endl;
-            cout << "Computer Score = " << com_score << endl;
-            cout << "  Pilihlah dari keempat ini : " << endl;
-            cout << "    1. Batu\n    2. Kertas\n    3. Gunting\n    4. Keluar" << endl;
-            cout << "  Tulis Pilihanmu : ";
-            cin >> pil;
-            if (pil == "batu" || pil == "Batu" || pil == "1")
+            for (int ronde = 1; ronde <= rounds; ronde++)
             {
-                cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                cout << "  Kamu pilih = BATU  " << endl;
-
-                if (com <= 3 && com >= 1)
-                {
-                    cout << "  COM pilih = BATU  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << "   ==> SERI ! <==   " << endl;
-                }
-                else if (com <= 6 && com >= 4)
-                {
-                    cout << "  COM pilih = KERTAS  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << " ==> KAMU KALAH ! <==" << endl;
-                    player_score--;
-                    com_score++;
-                }
-                else
-                {
-                    cout << "  COM pilih = GUNTING  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << "  ==> KAMU MENANG ! <==  " << endl;
-                    player_score++;
-                    com_score--;
-                }
-            }
-            else if (pil == "kertas" || pil == "Kertas" || pil == "2")
-            {
-                cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                cout << "  Kamu pilih = KERTAS  " << endl;
-
-                if (com <= 3 && com >= 1)
-                {
-                    cout << "  COM pilih = KERTAS  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << "    ==> SERI ! <==   " << endl;
-                }
-                else if (com <= 6 && com >= 4)
-                {
-                    cout << "  COM pilih = GUNTING  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << " ==> KAMU KALAH ! <==  " << endl;
-                    player_score--;
-                    com_score++;
-                }
-                else
-                {
-                    cout << "  COM pilih = BATU  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << " ==> KAMU MENANG ! <== " << endl;
-                    player_score++;
-                    com_score--;
-                }
-            }
-            else if (pil == "gunting" || pil == "Gunting" || pil == "3")
-            {
-                cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                cout << "  Kamu pilih = GUNTING  " << endl;
-
-                if (com <= 3 && com >= 1)
-                {
-                    cout << "  COM pilih = GUNTING  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << "    ==> SERI ! <==   " << endl;
-                }
-                else if (com <= 6 && com >= 4)
-                {
-                    cout << "  COM pilih = BATU  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << " ==> KAMU KALAH ! <==  " << endl;
-                    player_score--;
-                    com_score++;
-                }
-                else
-                {
-                    cout << "  COM pilih = KERTAS  " << endl;
-                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
-                    cout << " ==> KAMU MENANG ! <== " << endl;
-                    player_score++;
-                    com_score--;
-                }
-            }
-            else if (pil == "keluar" || pil == "Keluar" || pil == "4")
-            {
-            exit:
+            kedua:
                 system("cls");
-                cout << "\n Terimakasih, Sudah Bermain :) " << endl;
-                cout << "      Bermain Lagi Yah        " << endl;
+                srand(time(NULL));
+                int com = rand() % 10;
+                cout << "___________________________________" << endl
+                     << endl;
+                cout << " ================================" << endl;
+                cout << "  \tSelamat Datang " << nama_player << endl;
+                cout << "  Di Game Batu, Kertas, Gunting " << endl;
+                cout << " ================================" << endl;
+                cout << "Ronde ke : " << ronde << "/" << rounds << endl;
+                cout << nama_player << " Score = " << player_score << endl;
+                cout << "Computer Score = " << com_score << endl;
+                cout << "  Pilihlah dari keempat ini : " << endl;
+                cout << "    1. Batu\n    2. Kertas\n    3. Gunting\n    4. Keluar" << endl;
+                cout << "  Tulis Pilihanmu : ";
+                cin >> pil;
+                if (pil == "batu" || pil == "Batu" || pil == "1")
+                {
+                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                    cout << "  Kamu pilih = BATU  " << endl;
+
+                    if (com <= 3 && com >= 1)
+                    {
+                        cout << "  COM pilih = BATU  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << "   ==> SERI ! <==   " << endl;
+                    }
+                    else if (com <= 6 && com >= 4)
+                    {
+                        cout << "  COM pilih = KERTAS  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << " ==> KAMU KALAH ! <==" << endl;
+                        player_score--;
+                        com_score++;
+                    }
+                    else
+                    {
+                        cout << "  COM pilih = GUNTING  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << "  ==> KAMU MENANG ! <==  " << endl;
+                        player_score++;
+                        com_score--;
+                    }
+                }
+                else if (pil == "kertas" || pil == "Kertas" || pil == "2")
+                {
+                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                    cout << "  Kamu pilih = KERTAS  " << endl;
+
+                    if (com <= 3 && com >= 1)
+                    {
+                        cout << "  COM pilih = KERTAS  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << "    ==> SERI ! <==   " << endl;
+                    }
+                    else if (com <= 6 && com >= 4)
+                    {
+                        cout << "  COM pilih = GUNTING  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << " ==> KAMU KALAH ! <==  " << endl;
+                        player_score--;
+                        com_score++;
+                    }
+                    else
+                    {
+                        cout << "  COM pilih = BATU  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << " ==> KAMU MENANG ! <== " << endl;
+                        player_score++;
+                        com_score--;
+                    }
+                }
+                else if (pil == "gunting" || pil == "Gunting" || pil == "3")
+                {
+                    cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                    cout << "  Kamu pilih = GUNTING  " << endl;
+
+                    if (com <= 3 && com >= 1)
+                    {
+                        cout << "  COM pilih = GUNTING  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << "    ==> SERI ! <==   " << endl;
+                    }
+                    else if (com <= 6 && com >= 4)
+                    {
+                        cout << "  COM pilih = BATU  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << " ==> KAMU KALAH ! <==  " << endl;
+                        player_score--;
+                        com_score++;
+                    }
+                    else
+                    {
+                        cout << "  COM pilih = KERTAS  " << endl;
+                        cout << " ~~~~~~~~~~~~~~~~~~~~~~" << endl;
+                        cout << " ==> KAMU MENANG ! <== " << endl;
+                        player_score++;
+                        com_score--;
+                    }
+                }
+                else if (pil == "keluar" || pil == "Keluar" || pil == "4")
+                {
+                exit:
+                    system("cls");
+                    cout << "\n Terimakasih, Sudah Bermain :) " << endl;
+                    cout << "      Bermain Lagi Yah        " << endl;
+                    getch();
+                    return 0;
+                }
+                else
+                {
+                    cout << "___________________________________" << endl
+                         << endl;
+                    cout << " Inputan Salah ! Silahkan Ulangi Kembali " << endl;
+                    cout << "        ==> Tekan ENTER <==" << endl;
+                    getch();
+                    system("cls");
+                    goto kedua;
+                }
+                cout << "___________________________________" << endl
+                     << endl;
+                cout << " Tekan ENTER ";
                 getch();
-                return 0;
+                system("cls");
+            }
+        }
+        else if (rounds == 0)
+        {
+            cout << "Anda tidak memasukan ronde!! ";
+            system("cls");
+            goto pertama;
+        }
+        else
+        {
+            cout << "\n\n\n\n"
+                 << endl;
+            cout << "============================================================================" << endl;
+            cout << "                      **** Inputan Salah ! ****" << endl;
+            cout << "                              Ulangi ?" << endl;
+            cout << "============================================================================" << endl;
+            cout << "                                 y ? ";
+            cin >> ulangi;
+            if (ulangi == "y")
+            {
+                system("cls");
+                goto awal;
             }
             else
             {
-                cout << "___________________________________" << endl
-                     << endl;
-                cout << " Inputan Salah ! Silahkan Ulangi Kembali " << endl;
-                cout << "        ==> Tekan ENTER <==" << endl;
-                getch();
-                system("cls");
-                goto kedua;
+                goto keluar;
             }
-            cout << "___________________________________" << endl
-                 << endl;
-            cout << " Tekan ENTER ";
-            getch();
-            system("cls");
         }
         cout << "___________________________________" << endl;
         cout << "Hasil : " << endl;
