@@ -165,7 +165,7 @@ awal:
         {
             cout << "Anda tidak memasukan ronde!! ";
             system("cls");
-            goto pertama;
+            goto awal;
         }
         else
         {
@@ -243,7 +243,12 @@ awal:
             }
             else
             {
-                goto keluar;
+                system("cls");
+                cout << "\n Terimakasih, Sudah Bermain :) " << endl;
+                cout << "      Bermain Lagi Yah        " << endl;
+                getch();
+                return 0;
+                getch();
             }
         }
     }
