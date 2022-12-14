@@ -1,31 +1,35 @@
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <conio.h>
-#include <ctime>
-#include <time.h>
+#include <iostream> //header
+#include <stdio.h>  //header input/output
+#include <stdlib.h> //header yang berfungsi untuk operasi pembanding dan operasi konversi
+#include <string.h> // header yang digunakan untuk menangani string
+#include <conio.h>  //header kebanyakan digunakan pada compiler berbasis MS-DOS untuk membuat antarmuka konsol.
+#include <ctime>    //header mengkonvesi nilai yang dihasilkan dari pemangilan fungsi time() ke dalam bentuk string.
+#include <time.h>   //header  header yang berisi fungsi-fungsi, makro dan tipe untuk memanipulasi waktu.
 using namespace std;
 
 int main()
 {
-awal:
-    string siap, nama_player, ulangi, lagi, pil;
-    int player_score = 0, com_score = 0, rounds, ronde;
+start:
+    string siap,
+        nama_player,
+        ulangi,
+        lagi,
+        pil;
+    int player_score = 0, com_score = 0, rounds = 0, ronde;
     cout << "\n\n\n\n"
          << endl;
-    cout << "============================================================================" << endl;
-    cout << "                                      " << endl;
-    cout << "                            Kamu Siap" << endl;
-    cout << "                 Untuk Bermain Batu Kertas Gunting ? " << endl;
-    cout << "============================================================================" << endl;
-    cout << "                             [y/t] ? ";
+    cout << "\t\t=================================================================================" << endl
+         << endl;
+    cout << "\t\t\t\t\t\t     Kamu Siap" << endl;
+    cout << "\t\t\t\t\tUntuk Bermain Batu Kertas Gunting ? " << endl;
+    cout << "\t\t=================================================================================" << endl;
+    cout << "\t\t\t\t\t\t     [y/t] ? ";
     cin >> siap;
     system("cls");
     if (siap == "y")
     {
-    pertama:
-        cout << "Masukan nama anda :";
+    name:
+        cout << "Masukan nama anda : ";
         cin >> nama_player;
         system("cls");
         cout << nama_player << " berapa ronde anda ingin bermain ? : ";
@@ -36,8 +40,8 @@ awal:
             {
             kedua:
                 system("cls");
-                srand(time(NULL));
-                int com = rand() % 10;
+                srand(time(NULL));     // fungsi untuk menampilkan waktu
+                int com = rand() % 10; // fungsi nilai random sisa bagi 10
                 cout << "___________________________________" << endl
                      << endl;
                 cout << " ================================" << endl;
@@ -165,13 +169,13 @@ awal:
         {
             cout << "Anda tidak memasukan ronde!! ";
             system("cls");
-            goto awal;
+            goto start;
         }
         else
         {
             cout << "Input salah!! ";
             system("cls");
-            goto awal;
+            goto start;
         }
         cout << "___________________________________" << endl;
         cout << "Hasil : " << endl;
@@ -201,7 +205,7 @@ awal:
         if (lagi == "y")
         {
             system("cls");
-            goto awal;
+            goto start;
         }
         else if (lagi == "t")
         {
@@ -225,7 +229,7 @@ awal:
             if (ulangi == "y")
             {
                 system("cls");
-                goto awal;
+                goto start;
             }
             else
             {
@@ -249,6 +253,7 @@ awal:
         cout << "============================================================================" << endl;
         cout << "                             Tekan ENTER ";
         getch();
+        system("cls");
         return 0;
     }
     else
@@ -264,7 +269,7 @@ awal:
         if (ulangi == "y")
         {
             system("cls");
-            goto awal;
+            goto start;
         }
         else
         {

@@ -35,6 +35,7 @@ awalnemen:
         cout << "    1. Batu\n    2. Kertas\n    3. Gunting\n    4. Keluar" << endl;
         cout << "  Tulis Pilihanmu : ";
         cin >> pil;
+        srand(time(0));
         cout << endl;
 
         if (pil == "batu" || pil == "Batu" || pil == "1")
