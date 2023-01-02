@@ -5,7 +5,7 @@
 #include <string.h>
 using namespace std;
 
-string siap, ulangi, nama_player, player, ulangi_ronde, isi[3] = {"batu", "gunting", "kertas"}, lagi;
+string siap, ulangi, nama_player, player, ulangi_ronde, lagi;
 int rounds = 0, player_score = 0, com_score = 0, ronde;
 void start(), end(), eror(), createname(), startgame(), ingame(), batu(), gunting(), kertas(), erorinput(), result();
 
